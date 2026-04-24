@@ -1,0 +1,148 @@
+/* ============================================================
+   YouTube Members-only content hider
+   Platforms: youtube.com (Desktop) | m.youtube.com (Mobile)
+   Description: Removes Members-only content sections, badges, and filters
+   Compatible: Browsers (Desktop), WebView (Mobile) + NouTube
+   Version: 20260424
+   Developer: NIGHTZNERO (NZN)
+   ============================================================ */
+
+/* ============================================================
+   DESKTOP VERSION (youtube.com)
+   Prefix: ytd-*
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   SECTION 1: Hide Members-Only Shelf on Channel Home (Desktop)
+   Target: Rich shelf sections with membership links
+   ------------------------------------------------------------ */
+ytd-rich-shelf-renderer:has(a[href*="membership"]),
+ytd-rich-shelf-renderer:has(a[href*="members"]),
+ytd-rich-section-renderer:has(a[href*="membership"]),
+ytd-rich-section-renderer:has(a[href*="members"]) {
+  display: none !important;
+}
+
+/* ------------------------------------------------------------
+   SECTION 2: Hide Members-Only Filter Button (Desktop)
+   Target: Filter chips in channel videos tab
+   ------------------------------------------------------------ */
+ytd-chip-cloud-renderer a[href*="members"],
+ytd-chip-cloud-renderer [aria-label*="Members only"],
+ytd-chip-cloud-renderer [aria-label*="Tylko wspierający"] {
+  display: none !important;
+}
+
+/* ------------------------------------------------------------
+   SECTION 3: Hide Individual Members-Only Videos (Desktop)
+   Target: Video renderers with members-only badge
+   ------------------------------------------------------------ */
+ytd-video-renderer:has([aria-label*="Members only"]),
+ytd-video-renderer:has([aria-label*="Tylko wspierający"]),
+ytd-compact-video-renderer:has([aria-label*="Members only"]),
+ytd-compact-video-renderer:has([aria-label*="Tylko wspierający"]),
+ytd-grid-video-renderer:has(.badge-style-type-members-only) {
+  display: none !important;
+}
+
+/* ------------------------------------------------------------
+   SECTION 4: Hide Members-Only Badges (Desktop)
+   Target: Green membership badges on videos
+   ------------------------------------------------------------ */
+ytd-badge-supported-renderer[aria-label*="Members only"],
+ytd-badge-supported-renderer[aria-label*="Tylko wspierający"],
+.badge-style-type-members-only {
+  display: none !important;
+}
+
+/* ============================================================
+   MOBILE VERSION (m.youtube.com)
+   Prefix: ytm-*
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   SECTION 1: Hide Members-Only Shelf on Channel Home
+   Target: First vertical shelf separator on mobile
+   ------------------------------------------------------------ */
+ytm-shelf-renderer.vertical-shelf-separators:nth-of-type(1) {
+  display: none !important;
+}
+
+/* ------------------------------------------------------------
+   SECTION 2: Hide Members-Only Filter Button (Mobile)
+   Target: Filter chips in channel videos tab
+   ------------------------------------------------------------ */
+ytm-chip-cloud-renderer a[href*="members"],
+ytm-chip-cloud-renderer [aria-label*="Members only"],
+ytm-chip-cloud-renderer [aria-label*="Tylko wspierający"] {
+  display: none !important;
+}
+
+/* ------------------------------------------------------------
+   SECTION 3: Hide Individual Members-Only Videos (Mobile)
+   Target: Video renderers with members-only badge
+   ------------------------------------------------------------ */
+ytm-video-renderer:has([aria-label*="Members only"]),
+ytm-video-renderer:has([aria-label*="Tylko wspierający"]),
+ytm-compact-video-renderer:has([aria-label*="Members only"]),
+ytm-compact-video-renderer:has([aria-label*="Tylko wspierający"]) {
+  display: none !important;
+}
+
+/* ------------------------------------------------------------
+   SECTION 4: Hide Members-Only Badges (Mobile)
+   Target: Green membership badges on videos
+   ------------------------------------------------------------ */
+ytm-badge-supported-renderer[aria-label*="Members only"],
+ytm-badge-supported-renderer[aria-label*="Tylko wspierający"],
+ytm-rich-item-renderer:has(.badge-style-type-members-only) {
+  display: none !important;
+}
+
+/* ============================================================
+   DESKTOP VERSION (youtube.com)
+   Prefix: ytd-*
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   SECTION 1: Hide Members-Only Shelf on Channel Home (Desktop)
+   Target: Rich shelf sections with membership links
+   ------------------------------------------------------------ */
+ytd-rich-shelf-renderer:has(a[href*="membership"]),
+ytd-rich-shelf-renderer:has(a[href*="members"]),
+ytd-rich-section-renderer:has(a[href*="membership"]),
+ytd-rich-section-renderer:has(a[href*="members"]) {
+  display: none !important;
+}
+
+/* ------------------------------------------------------------
+   SECTION 2: Hide Members-Only Filter Button (Desktop)
+   Target: Filter chips in channel videos tab
+   ------------------------------------------------------------ */
+ytd-chip-cloud-renderer a[href*="members"],
+ytd-chip-cloud-renderer [aria-label*="Members only"],
+ytd-chip-cloud-renderer [aria-label*="Tylko wspierający"] {
+  display: none !important;
+}
+
+/* ------------------------------------------------------------
+   SECTION 3: Hide Individual Members-Only Videos (Desktop)
+   Target: Video renderers with members-only badge
+   ------------------------------------------------------------ */
+ytd-video-renderer:has([aria-label*="Members only"]),
+ytd-video-renderer:has([aria-label*="Tylko wspierający"]),
+ytd-compact-video-renderer:has([aria-label*="Members only"]),
+ytd-compact-video-renderer:has([aria-label*="Tylko wspierający"]),
+ytd-grid-video-renderer:has(.badge-style-type-members-only) {
+  display: none !important;
+}
+
+/* ------------------------------------------------------------
+   SECTION 4: Hide Members-Only Badges (Desktop)
+   Target: Green membership badges on videos
+   ------------------------------------------------------------ */
+ytd-badge-supported-renderer[aria-label*="Members only"],
+ytd-badge-supported-renderer[aria-label*="Tylko wspierający"],
+.badge-style-type-members-only {
+  display: none !important;
+}
