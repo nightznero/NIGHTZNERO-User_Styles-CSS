@@ -1,0 +1,19 @@
+/* Background */
+body,
+ytm-app,
+#content {
+  background-color: #000000 !important;
+}
+
+/* Movies cards */
+ytm-rich-item-renderer,
+ytm-video-renderer,
+ytm-compact-video-renderer {
+  background-color: #000000 !important;
+}
+
+/* Header */
+ytm-top-bar-title-renderer,
+#header {
+  background-color: #FF0033 !important;
+}
